@@ -1,0 +1,56 @@
+@charset "utf-8";
+body {
+	background-color: #900;
+}
+#Site {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	background-color: #891010;
+	min-height: 600px;
+	width: 900px;
+	position: relative;
+	margin: 20px auto;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	overflow: hidden;
+	color: #FFF;
+	border-width: 1px;
+	border-color: #000;
+	border-style:solid;
+}
+#Linkleiste {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 50px;
+	width: 810px;
+}
+#Linkleiste ul {
+	padding: 0px;
+	margin:0px auto;
+	text-align: center;
+}
+#Linkleiste ul li {
+	float: left;
+	display: block;
+	list-style-type: none;
+	font-size: 18px;
+}
+#Linkleiste ul li a {
+	background-image: url(lb.gif);
+	background-repeat: repeat;
+	background-position: right;
+	display: block;
+	line-height: 50px;
+	text-decoration: none;
+	font-size: 21px;
+	color: #371C1C;
+	padding-right: 57px;
+	padding-left: 57px;
+}
+#Linkleiste ul li a:hover{
+	background-color: #903;
+}
+#Inhalt {
+	margin: 10px;
+	height: 100%;
+}

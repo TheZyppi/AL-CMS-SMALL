@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>{$title}</title>
+{$css}
+<script>
+function check() 
+{ 
+	var username = null;
+	var password = null; 
+	username = document.getElementById('username');
+	password = document.getElementById('password'); 
+	if (username.value.length <= 0 && password.value.length <=0) 
+	{ 
+		document.getElementById('errors').innerHTML ="Username and Password missing!"; 
+		return false; 
+	} 
+	else if(username.value.length <= 0)
+	{
+		document.getElementById('errors').innerHTML ="Username missing!"; 
+		return false;
+	}
+	else if(password.value.length <= 0)
+	{
+		document.getElementById('errors').innerHTML ="Password missing!"; 
+		return false;
+	}
+	else
+	{
+		return true;
+		} 
+		}
+</script>
+</head>

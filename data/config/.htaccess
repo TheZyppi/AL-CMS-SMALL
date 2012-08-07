@@ -1,0 +1,9 @@
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+#</IfModule>
+
+<Files "dbcon.php">
+Order Allow,Deny
+Deny from All
+</Files>

@@ -1,0 +1,164 @@
+@charset "utf-8";
+/**
+-----------------------
+Farben und Hintergr�nde
+-----------------------**/
+/* Alle kritischen Werte instanziieren */
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  border-spacing: 0;
+}
+
+
+/* Farben und Hintergrund setzen */
+@charset "utf-8";
+body {
+	background-color: #fff;
+}
+#liste
+{
+	background-color: #333333;
+	height: 35px;
+}
+#oben {
+	background-color: #fff;
+	height: 50px;
+	margin: 20px 0px 150px 0px;
+}
+#login
+{
+	background-color: #fff;
+	float: right;
+	height: 50px;
+	margin: 0px 50px 0px 0px;
+}
+/*Button*/
+.btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: #CCCCCC #CCCCCC #B3B3B3;
+    border-radius: 8px 8px 8px 8px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 8px 20px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+/*Button Ende*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Required */
+}
+
+body {
+	color: #000000;
+  background-color: #E6E6E6;
+  font: 11px Verdana, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font: bold 12px Verdana, sans-serif;
+}
+
+h2 {
+  padding: 1em 0 .2em 0;
+  font: normal 18px/1.5em Georgia, serif;
+}
+
+p {
+  margin: 2em 0;
+  line-height: 1.5em;
+}
+
+a {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+#container-page {
+  margin: 0 auto;
+  background: #E6E6E6;
+  text-align: left;
+  position: relative;
+  min-height: 100%; /* For Modern Browsers */
+  height: auto !important; /* For Modern Browsers */
+  height: 100%; /* For IE */
+}
+
+#container-head {
+  background: #FFFFFF;
+}
+
+#head {
+  padding: 1em;
+}
+
+#container-content {
+  padding: 0 2em 40px 2em;
+}
+
+#container-content:after {
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+
+#content-pri {
+  width: 80%;
+  float: right;
+}
+
+#content-sec {
+  padding: 1em 0;
+  width: 20%;
+  float: left;
+}
+
+#content-sec ul,#content-sec ul li {
+  list-style: none none;
+}
+
+#container-foot {
+  width: 100%;
+  background: #CCC;
+  position: absolute;
+  bottom: 0 !important;
+  bottom: -1px; /* For Certain IE widths */
+  height: 40px;
+}
+
+#foot {
+  padding: 0 1em;
+  line-height: 40px;
+}

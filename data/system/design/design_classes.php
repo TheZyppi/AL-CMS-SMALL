@@ -256,7 +256,16 @@
 				// CSS included
 				design::assign("css", require_once("".$srdp."design/".design::design_css($main_id)."css/index.php"));
 				// Title
-				design::assign("title", "");
+				$title_query=mysql_query("SELECT CID, funktion FROM al_config WHERE CID='1'");
+				if(!$title_query || $title_query==false)
+				{
+					$title="AL-CMS";
+				}
+				else {
+					$title_array=mysql_fetch_array($title_query);
+					$title=$title_array["funktion"];
+				}
+				design::assign("title", "$title");
 			}
 			}
 			
@@ -303,7 +312,7 @@ public static function body_normal($srdp)
 	
 	private static $template_body_head = "";
 
-	private static $template_body_plugin = "";
+	private static $template_body_site = "";
 
 	private static $template_body_footer = "";
 	
@@ -379,13 +388,13 @@ public static function load_body_head($file, $srdp)    {
         design::parseFunctions();
     }
 
-public static function load_body_plugin($file, $srdp)    {
+public static function load_body_site($file, $srdp)    {
         design::$templateName = $file;
         design::$template_body_plugin_File = $file;
 
         if(isset(design::$template_body_plugin_File)) {
             if( file_exists(design::$template_body_plugin_File) ) {
-                design::$template_body_plugin  = file_get_contents(design::$template_body_plugin_File);
+                design::$template_body_site  = file_get_contents(design::$template_body_plugin_File);
             } else {
             	echo "1";
                 return false;
@@ -479,7 +488,7 @@ design::load("data/design/default/error_site.html", $srdp);
 // Platzhalter ersetzen
 design::assign("error" ,"No template body head set.");	
 		}
-		else if(design::$template_body_plugin=="" || design::$template_body_plugin==false)
+		else if(design::$template_body_site=="" || design::$template_body_site==false)
 		{
 design::load("data/design/default/error_site.html", $srdp);
 // Platzhalter ersetzen
@@ -492,7 +501,7 @@ design::load("data/design/default/error_site.html", $srdp);
 design::assign("error" ,"No template body foot set.");	
 		}
 		else {
-		design::$template="".design::$template_head."".design::$template_body_head."".design::$template_body_plugin."".design::$template_body_footer."";
+		design::$template="".design::$template_head."".design::$template_body_head."".design::$template_body_site."".design::$template_body_footer."";
 		}
 		}
                 public static function assignEach($name, $array) {

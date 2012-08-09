@@ -124,20 +124,20 @@ class rights
 															else {
 																if($use_main_design==true)
 																{
-															design::load_body_plugin("".$srdp."design/".design::design_path($design_id, $main_id, $use_main_design)."sites/".$site_d_a['html_file']."", $srdp);
+															design::load_body_site("".$srdp."design/".design::design_path($design_id, $main_id, $use_main_design)."sites/".$site_d_a['html_file']."", $srdp);
 																}
 																else
 																{
-																	design::load_body_plugin("".$srdp."design/".design::design_path($design_id, $main_id, $use_main_design)."".$site_d_a['html_file']."", $srdp);
+																	design::load_body_site("".$srdp."design/".design::design_path($design_id, $main_id, $use_main_design)."".$site_d_a['html_file']."", $srdp);
 																}
 															design::settemplate($srdp);
-															if(!file_exists("".$srdp."functions/".$site_d_a['data']."") || file_exists("".$srdp."functions/".$site_d_a['data']."")==false || $site_d_a['data']=="")
+															if(!file_exists("".$srdp."sites/".$site_d_a['data']."") || file_exists("".$srdp."sites/".$site_d_a['data']."")==false || $site_d_a['data']=="")
 															{
 															
 															}
 															else
 																{
-															require_once("".$srdp."functions/".$site_d_a['data']."");		
+															require_once("".$srdp."sites/".$site_d_a['data']."");		
 																}
 															}
 														}

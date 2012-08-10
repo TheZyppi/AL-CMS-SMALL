@@ -10,7 +10,7 @@
  *(at your option) any later version.  
  *   
  */
-if(isset($_POST['login']))
+if(isset($_POST['login']) && !empty($_POST['login']))
 {
 $security_check=mysql_query("SELECT funktion FROM al_config WHERE CID='4'");
 if(!$security_check || $security_check==false)
